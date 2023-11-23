@@ -33,15 +33,3 @@ variable "docker_repos" {
   type    = list(string)
   default = []
 }
-
-variable "cloudflare_api_token" {
-  type = string
-}
-
-variable "cloudflare_zone_ids" {
-  type = map(string)
-}
-
-variable "database_passwords" {
-  type = map(string)
-}

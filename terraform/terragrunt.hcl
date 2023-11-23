@@ -28,10 +28,7 @@ terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "~> 5.11"
-    }
-    cloudflare = {
-      source = "cloudflare/cloudflare"
+      version = "~> 5.26"
     }
   }
 }
@@ -39,22 +36,6 @@ terraform {
 provider "aws" {
   region = "${local.secrets.aws_region}"
   profile = "${local.secrets.aws_profile}"
-}
-
-provider "aws" {
-  region = "ap-northeast-1"
-  alias = "tokyo"
-  profile = "${local.secrets.aws_profile}"
-}
-
-provider "aws" {
-  region = "us-east-1"
-  alias = "east1"
-  profile = "${local.secrets.aws_profile}"
-}
-
-provider "cloudflare" {
-  api_token = var.cloudflare_api_token
 }
 EOF
 }

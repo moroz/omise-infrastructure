@@ -62,7 +62,7 @@ resource "aws_cloudfront_distribution" "distribution" {
 }
 
 resource "aws_cloudfront_response_headers_policy" "cors" {
-  name = "cors-response-policy"
+  name = "${var.bucket_name}-cors-response-policy"
 
   cors_config {
     access_control_allow_credentials = true
