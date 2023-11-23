@@ -1,0 +1,11 @@
+---
+aws_profile: gg
+aws_region: ap-northeast-1
+aws_account_id: 682673513189
+project_name: chengda
+
+environments:
+  - staging
+
+cloudflare_zone_ids:
+  staging: "bbd00ea29ffaa2b65aebba1a635d262c"
